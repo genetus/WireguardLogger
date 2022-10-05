@@ -1,0 +1,61 @@
+interface: wg0
+  public key: u+0Pkyn3HWQSbmjcpR9o5wMuCFW/QpkBwNG8vHhgijI=
+  private key: (hidden)
+  listening port: 51820
+
+peer: Gg43fK3DPTNpN8Vup5NVZknlwfBafestU3Hv+atncXU=
+  endpoint: 93.92.193.34:64341
+  allowed ips: 192.168.54.51/32
+  latest handshake: 13 minutes, 14 seconds ago
+  transfer: 77.69 MiB received, 2.79 GiB sent
+  persistent keepalive: every 5 seconds
+
+peer: Do1uYEqn154+UKL+mjm/G9KBNwm8VmNIEle9arRv43Q=
+  endpoint: 188.243.182.161:3460
+  allowed ips: 192.168.54.3/32
+  latest handshake: 35 seconds ago
+  transfer: 1.18 GiB received, 22.65 GiB sent
+  persistent keepalive: every 5 seconds
+
+peer: l7EQGKCwqlcB+XZeHGr6qm9WxcoTdXVIBjlzNBkcbD4=
+  endpoint: 178.178.81.190:16208
+  allowed ips: 192.168.54.53/32
+  latest handshake: 4 minutes, 44 seconds ago
+  transfer: 906.51 MiB received, 12.36 GiB sent
+  persistent keepalive: every 5 seconds
+
+peer: qO5YO+4z9/MMMjyCcZBBgWAHGKzxpCpH5t+60EZJizE=
+  endpoint: 188.243.182.161:3426
+  allowed ips: 192.168.54.5/32
+  latest handshake: 1 hour, 22 minutes, 11 seconds ago
+  transfer: 62.51 MiB received, 2.90 GiB sent
+  persistent keepalive: every 5 seconds
+
+peer: g+AMjia5IeH1oo/1KBvVi3LA7N98edZODCwn/6IpiWA=
+  endpoint: 5.18.157.5:10897
+  allowed ips: 192.168.54.12/32
+  latest handshake: 6 hours, 24 minutes, 33 seconds ago
+  transfer: 115.04 MiB received, 4.93 GiB sent
+  persistent keepalive: every 5 seconds
+
+peer: gCzlO49iQa2e0JAtgKIEY2mhjw391UaFYdJL4RauLW8=
+  endpoint: 91.223.70.198:13062
+  allowed ips: 192.168.54.4/32
+  latest handshake: 3 days, 3 hours, 7 minutes, 23 seconds ago
+  transfer: 7.46 MiB received, 131.33 MiB sent
+  persistent keepalive: every 5 seconds
+
+peer: q39ERZBrSW3Y/X9/Z5zng4JK1cKdrsK7RlKV8z9TmSI=
+  endpoint: 185.97.201.19:3860
+  allowed ips: 192.168.54.6/32
+  latest handshake: 3 days, 13 hours, 40 minutes, 12 seconds ago
+  transfer: 15.67 MiB received, 962.59 MiB sent
+  persistent keepalive: every 5 seconds
+
+peer: SXVBD1TPAahwVfQWGTxjm4kFnimlwahK7XfPf3S4aFo=
+  allowed ips: 192.168.54.11/32
+  persistent keepalive: every 5 seconds
+
+peer: MKuL5Pjd4zVWX5nYrLjVH3b8KBVihGwzFtcf/ntCJkY=
+  allowed ips: 192.168.54.52/32
+  persistent keepalive: every 5 seconds
