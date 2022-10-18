@@ -40,7 +40,7 @@ func main() {
 		}
 		if strings.Contains(workString[i], "latest handshake:") {
 			status := "offline"
-			if parseOnlineStatus(workString[i]) {
+			if parseOnlineStatus(workString[i], 5) {
 				fmt.Println("Current peer is online")
 				status = "online"
 			} else {
@@ -72,14 +72,14 @@ func main() {
 		}
 	}
 
-	err = os.WriteFile("previous_run", []byte(statusString), 0644)
+	err = os.WriteFile("/etc/WireguardLogger/previous_run", []byte(statusString), 0644)
 	if err != nil {
 		panic(err)
 	}
 
 }
 
-func parseOnlineStatus(status string) bool {
+func parseOnlineStatus(status string, minutesToOffline int) bool {
 	if strings.Contains(status, "hour") || strings.Contains(status, "day") || strings.Contains(status, "week") {
 		return false
 	}
@@ -88,13 +88,14 @@ func parseOnlineStatus(status string) bool {
 	}
 	var minutes int
 	if _, err := fmt.Sscanf(strings.Split(status, ": ")[1], "%d", &minutes); err == nil {
-		return minutes <= 15
+		return minutes <= minutesToOffline
 	}
 	return false
 }
 
 func readFile(fileName string) map[string]string {
 	var data = make(map[string]string)
+	fileName = "/etc/WireguardLogger/" + fileName
 
 	previousData, err := os.ReadFile(fileName)
 	if err != nil {
@@ -121,7 +122,7 @@ func sendEmail(whoConnected string, name string, email string, action string) {
 	from := mail.Address{emailConfig["fromName"], emailConfig["fromEmail"]}
 	to := mail.Address{name, email}
 	subj := whoConnected + " " + action + " to VPN"
-	body := whoConnected + " " + action + " to VPN.\nWith best regard, Maxim Antonov."
+	body := whoConnected + " " + action + " to VPN.\nWith best regard, Noveo Team."
 
 	// Setup headers
 	headers := make(map[string]string)
